@@ -1,0 +1,158 @@
+CURSO DE HTML FREECODECAMP
+Hyper Text Markup Language
+
+- NO MORE than h3
+	- only 1 h1
+	- between 3 and 4 h2 - h3 for subtopics
+
+- Piece of code to turn web page's theme into dark:
+	 
+
+This is a CSS code piece
+
+- Live server (extension) is very usefull, to see an IP of our web page, and not a file route.
+
+- Markup Validation service
+
+- href = High reference
+
+- hr: Line to separate sub-topics
+. br: line breaker
+
+- you can'r write 2 blocks in the same line
+
+- em: EMPHASIS
+
+- &nsbp; = sangría (corta)
+- &lt = less than... (<)
+- &copy = copyright symbol
+
+- abbr symbol represents an abreviation, and puts some dots below the words we've put inside the abbr element
+
+- address: specific location (or address)
+
+- <!-- --> = Comment
+
+- 3 types of lists:
+	- Ordered lists
+	- Unordered lists
+	- Description lists
+
+- <li> = list
+- <ol> = ordered list
+- <ul> = unordered list
+- <dl> = description list
+- <dt> = description term
+- <dd> = description detail
+
+note: in the web page, the <li> element added some numbers to order the following points:
+	...I learn more about web dev.
+      ...I plan out my Schedule.
+      ...I use resources from 
+It added numbers thanks to the <ol> (ordered list)
+
+- Thanks to the <ul> element, it added some dots to order the lines, instead of numbers
+- HTML --> HT = Hypertext:Links
+- href: links to a page (link needed)
+- <a> = anchor tag, it turns blue the text we want it to be a link, and makes it one.
+
+
+HOMEWORK: CREATE AN ABOUT PAGE 
+
+<section>: shortcut to a place of the same page
+- h4 = horizontal rule
+- <nav>: navigation area
+
+note: to link a section created in the index page, we need to create an anchor tag (<a>) and then, in the href section write "# + the id we wrote for the specific section"
+e.g: href="#html"
+
+Link Text Rule: No links that say "click here". It provides no meaning.
+
+- download atribute, it's used to download what we assign.
+	e.g: Download an <a href="html5.png" download>HTML5 favicon</a>
+
+- target tag: opens the page we indicate in another window
+
+- <a href="/HTML/index.html">Back To Home</a> : links us back to the route of our website
+
+IMAGES
+- src = source
+- alt = description of the image
+- title = text that can complement our image, but is not necesarily required. If I put the punter of the mouse on the image, it will display a text that'll contain what we wrote in the title element
+- we can change the width and height in the future with css. We give those elements to let the browser know about the size and complementaration.
+- loading = 
+			- eager: does the opposite from lazy
+			- lazy: any image that's below will be shown. helps the page to be faster at loading
+
+
+- If I disable the cache button on inspectaction of chrome, with the loading atribute set to lazy, the page will only load the image/s that is/are loaded
+- figure element: the img element goes inside of it. It's used with a figcaption element inside of it, that gives captions below the image. It's not only for images, it can be used with the code element, for example.
+- code = helps you actually to display code inside of a paragraph for example.
+
+- Image resources: 
+	- Placeholder Image generators:
+		https://loremipsum.io/21-of-the-best-placeholder-image-generators/
+	- Sites with Freely-usable images:
+		https://unsplash.com/
+		https://www.pexels.com/
+		https://gratisography.com/
+		https://pixabay.com/
+	- Image resizing or editing software:
+		https://www.irfanview.com/
+		https://www.canva.com/
+	- Image compressions:
+		https://tinypng.com/
+
+- header - main - footer: are different elements to separate and clasificate the different content parts of our website
+- label = etiqueta. We label the different nav elements for the sistem to know which nav element is which, if we have more than one
+- aria-label = to label a nav element
+- article: piece of text that has it's own topic
+- aside: another section of complementary text that's not as important as the header
+- summary and details elements work together: they hide a piece of text after this elements
+- mark element: resaltador
+- the time and datetime elements give some meaning to the browser of the hour
+- all the html elements: mozila developer network
+- span: have no meaning, don't change or add any value to the code, only work for css
+
+note: avoid using div and span when using semantic elements
+note: BE CAREFULL WITH INDENTATION
+
+- tables: need a bit of css
+- tr: table row
+- td: table data
+- th: table heading
+- with css, we've given the table the style of a table
+
+- the rowspan element indicates the number of rows (filas) a cell should span (durar)
+
+- SECTIONS of a table:
+		thead: indicates the section of the header
+		tbody: for the table body
+
+- scope: specifies whether a header cell is a header for a column, row, or group of columns or rows
+
+- form (action): specifies where the information will be sent
+- label (for): match the id value of the input
+- input:text = get an input in text format
+- the id matches the value with the label
+- placeholder: gives an example of a name that could be given as a "ghost" text
+- required: makes the field required before the user can submit
+
+- autofocus: the focus will be put on the input when the page loads. ONLY CAN BE WRITTEN ONE TIME PER PAGE
+
+note: autocomplete is not supported on password input
+
+- optgroup: it's used to separate and clasify options
+- multiple (in the select block): the user will be able to choose more than one choice 
+- size="x" = specifies the number of elements that will be shown at the first, and same time when the page reloads
+
+NOTA: shift + alt + A = makes a comment everything that's selected
+- legend: it's like a caption. It says what we are requesting in this section
+- fieldset: closes a section of info in a square
+- radio: makes a selectable option with the form of a circle
+nota: if multiple radio options have the same name atribute, only one of them will be able to be selected. 
+- checkbox: is similar to radio, but this one is a square that's checkable. More than one can be selected at the same time
+- textarea: 
+
+- formaction: give a different adress for where to send the informarion given in the input/s
+- colspan or rowspan elements: make a cell expand through the number of cells we specify on this functions

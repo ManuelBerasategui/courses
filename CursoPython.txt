@@ -1,0 +1,929 @@
+	Un programa es una serie de instrucciones previamente codificadas, las cuales 
+permiten realizar una tarea específica en una computadora
+
+A esta serie de instrucciones se las llama CODIGO FUENTE, el cual es escrito por los programadores
+
+El código, debe ser escrito en un lenguaje de programación, y que posteriormente pueda ser
+convertido en un archivo ejecutable
+
+Para que el codigo fuente pueda ser transformado en un archivo ejecutable, es necesaria la ayuda
+de un compilador, y posteriormente, ser ejecutado en una unidad de procesamiento (CPU), con la 
+ayuda de un intérprete
+
+Los intérpretes se diferencian de los compiladores, en que, mientras el compilador traduce un 
+programa desde su descripción en un lenguaje de programación al de codigo de máquina del 
+sistema, los intérpretes sólo realizan la traducción a medida que sea necesaria, típicamente,
+intrucción por instrucción, y normalmente no guardan el resultado de dicha traducción.
+
+En python existen distintas operaciones para manipular una cadena de caracteres (String). Dentro
+de las cuales se encuentran:
+- La asignación (+=)
+- La concatenación (+)
+- La búsqueda (find())
+- La extracción ([I:F])   I = Pos. Inicio; F = Pos. Fin
+- La comparación (==)
+
+Asignación:
+ mensaje = "Hola"
+ mensaje += " "
+ mensaje += "Mundo"
+ print(mensaje) ---> Hola Mundo
+
+Concatenación
+ nombre = "Nombre"
+ espacio = " "
+ apellido = "Apellido"
+ print(nombre + espacio + apellido)
+
+Busqueda
+ mensaje = "Hola Mundo"
+ buscar_subCadena = mensaje.find("Mundo")
+ print(buscar_subCadena)
+
+Extracción
+ mensaje = "Hola Mundo"
+ extraerSubCadena = mensaje[0:3]
+ print(extraerSubCadena)
+
+Comparación
+ mensaje1 = "Hola"
+ mensaje2 = "Hola"
+ print(mensaje1 == mensaje2) ---> True
+
+
+Las palabras reservadas son identificadores
+para uso exclusivo del lenguaje de programación
+, que no pueden ser utilizadas para identificar 
+y nombrar variables, métodos, objetos o cualquier
+elemento dentro de nuestro código
+
+En Python existen un total de 28 palabras reservadas, 
+las cuales fueron asignadas para uso exclusivo del 
+lenguaje de programación 
+
+Operadores aritméticos en Python:
+-Suma (+)    -Multiplicación (*)   -División Entera (//)
+-Resta (-)   - División (/)
+- Exponente (**) - Módulo/resto de la división (%)
+
+
+
+Comentarios en Python
+
+- #
+- "" ---> al no ser asignados a una variable, dejan de
+ser un string y pasan a ser un comentario, el intérprete 
+los ignora
+- """, para crear un comentario multilínea
+
+
+Los principales tipos de datos en Python
+- Enteros y Largos (int)
+- Flotantes (float)
+- Números complejos (complex) ---> son aquellos que tienen una parte
+real y una párte imaginaria. En Python se expresa mediante 
+el tipo complex
+- Cadenas (Strings)
+- Booleanos (True & False)
+
+Nota: Los números del tipo de dato largo (long) están delimitados
+por la capacidad de almacenamiento del dispositivo, es por esto 
+que no se pueden probar, pero es bueno conocerlos
+
+SENTENCIAS CONDICIONALES SIMPLES
+Intruccióin o grupo de instrucciones que se ejecutan cuando a un programa se le establece una condición lógica. Al cumplirse dicha condición, el programa ejecuta la intrucción que ha sido asignada a esta condición
+
+Ayudan a controlar la toma de desiciones dentro de un programa usando la lógica. Estas sentencias comprueban si una condición es verdadera o falsa, y en base a eso lleva a cabo una acción.
+
+-Sintaxis
+
+1. Sentencias condicionales simples
+if + condición lógica + :
+---------- + Instrucción
+---------- + Instrucción
+---------- + Instrucción
+...
+(------ es el espacio que se deja antes de escribir la instrucción para que python lo interprete como tal)
+
+NOTA DE EJERCICIO:
+- En el ej. de los condicionales simples, para sacar el promedio se suman las notas de las distintas materias y se divide por 3 (porque son 3 materias, si fueran cuatro se dividiría por 4 y así), el problema es que queda un número demasiado largo con muchos decimales periódicos. Para evitar esto se debe transformar el número ya dividido (Promedio, con números decimales) en número entero, con la función    promedio = int(promedio). MAS FACIL se pueden dividir la suma de las calificaciones con dos //. También se puede utilizar la función round(), para controlar la cantidad de decimales que querramos que sean mostrados.
+
+
+SENTENCIAS CONDICIONALES COMPUESTAS:
+En Python, las sentencias condicionales compuestas, son aquellas que nos permiten tener una instrucción a ejecutar de acuerdo a la condición establecida. Es decir, si la condición se cumple, habrá una instrucción a ejecutar correspondiente a la rama de verdadero. Pero de igual manera, si la condición "NO" se cumple, habrá otra instrucción a ejecutar correspondiente a la rama de falso. En las sentencias condicionales compuestas, jamás se ejecutarán de manera simultánea las intrucciones de ambas ramas, únicamente, se ejecutará la instrucción correspondiente a la rama de verdadero o falso, cuya desición es determinada por la condición establecida. 
+
+-Sintaxis
+
+1. Sentencias condicionales compuestas
+
+if + condición lógica + :
+---------- + Instrucción
+---------- + Instrucción
+---------- + Instrucción
+...
+else + :
+---------- + Instrucción
+---------- + Instrucción
+---------- + Instrucción
+...
+
+simplemente se le agrega la sentencia else
+
+-SENTENCIAS CONDICIONALES MULTIPLES:
+Tienen como finalidad, la toma de desiciones especializadas que permten evaluar una variable con distintos resultados, ejecutando para cada caso una serie de instrucciones específicas. Nos permite elegir una ruta de entre varias rutas posibles, con base al valor de una variable que actúa como selector.
+En el momento en que alguna de las condiciones se cumpla, se ejecuta la instrucción correspondientes a dicha condición y la ejecución de la sentencia condicional finalizara.
+
+-Sintaxis
+
+1. Sentencias condicionales múltiples
+
+if + condición lógica + :
+---------- + Instrucción
+elif + condición lógica + :
+---------- + Instrucción 
++ condición lógica + :
+---------- + Instrucción
+
+OPERADORES RELACIONALES
+Son símbolos que se usan para comparar dos valores, y generalmente son utilizados en las sentencias condicionales para la toma de desiciones. Al utilizarlos, dentro de una sentencia condicional, si el resultado de la comparación es correcto, la expresión o condición es considerada verdadero (true), y en caso contrario será falsa (false).
+
+OPERADORES LÓGICOS
+En ocasiones, es necesario utilizar más de dos condiciones lógicas dentro de una misma condición, con lo cual, nos vemos en la necesidad de implementar múltiples operadores relacionales para crear una expresión lógica mucho más compleja. Sin embargo, no es posible colocar dos condiciones lógicas dentro de una misma condición, sin el apoyo de algún elemento que les indique a nuestros programas, que se realizará la unión de dos o más condiciones lógicas dentro de una misma expresión. Para este tipo de situaciones ecisten los operadores lógicos, los cuales, permiten agrupar condiciones lógicas dentro de una misma condición. Es decir, con los operadores lógicos tenemos la posibilidad de utilizar mpúltiples operadores relacionales dentro de una misma condición lógica.
+
+
+EJERCICIO PRÁCTICO 1
+
+IMPORTANTE:
+- Clave 1:
+	1 año = 6 dias 
+	2 a 6 años = 14 dias	 
+	a partir 7 años = 20 dias
+- Clave 2:
+	1 año = 7 dias
+	2 a 6 años = 15 dias
+	a partir 7 años = 22 dias
+- Clave 3:
+	1 año = 10 dias
+ 	2 a 6 años = 20 dias
+	a partir 7 años = 30 dias
+
+EJERCICIO PRÁCTICO 2
+Programa que pida un número e imprima en pantalla si el mismo es par o impar
+
+EJERCICIO PRÁCTICO 3
+Programa que pide 3 números al usuario y determina cuál de ellos es el mas grande
+
+OPERADORES DE ASIGNACIÓN
+Este operador asigna un valor a la variable de la izquierda basado en el valor de la derecha. El operador de asignación más utilizado es el igual (=)
+
+x = y
+
+Operadores de asignación en python
+X = 3
+- (=) asignación: X = 3
+- (+=) asignación de suma o adición: X += 5
+                                     X = 8
+
+- (-=) asignación de resta o sustracción:
+                                        X -= 1
+                                        X = 2
+
+- (*=) asignación de multiplicación: X *= 2
+                                     X = 6  
+
+- (/=) asignación de división: X /= 2
+                               X = 1.5
+
+- (//=) asignación de división entera: X //= 2
+                                       X = 1
+
+- (**=) asignación de de exponente: X **= 3
+                                    X = 9
+
+- (%=) asignación de módulo o resto: X %= 2
+                                     X = 5
+
+EJERCICIO PRÁCTICO 4
+Crear una calculadora que permita realizar todos los tipos de operacion posibles, con UNA SOLA variable
+
+LOS PARÁMETROS SEP Y END:
+
+La función print() es quizás una de las herramientas más útiles en el lenguaje de programación Python, al momento de interactual con los usuarios de nuestros programas. Por tal motivo, es indispensable conocer la manera en que podemos manipular dichas impresiones en pantalla, con la finalidad de tener el control completo del texto a mostrar. Para ello contamos con estos parámetros.
+
+- El parámetro end, se utiliza para agregar 	cualquier cadena de caracteres al final de la salida e impresión en pantalla de la función print(). Además, por defecto la función 
+print() genera un salto de línea al terminar su ejecución, sin embargo, con ayuda del parámetro end, es posible evitar el salto de línea. 
+
+- En ocasiones, es posible que deseemos imprimir múltiples valores de manera legible utilizando la función print(). El parámetro sep, se utiliza para dar formato a las cadenas de caracteres que deben imprimirse en pantalla, agregando un separador entre las cadenas que se imprimirán.
+
+
+CICLOS O BUCLES
+Cuando estamos desarrollando un programa, nos encontramos con la necesidad de ejecutar una o más líneas de código en repetidas ocaciones, con lo cual la opción más lógica es duplicar el código de estas instrucciones para que el programa realice la tarea asignada. Sin embargo, esta alternativa no es la más óptima ya que duplicar código puede genera diversos problemas como, por ejemplo, archivos innecesariamente más extensos y difíciles de comprender al momento de querer realizar alguna modificación o actualización del mismo. Ante esta situación, en prohgramación contamos con sentencias de repetición de código, las cuáles nos permiten ejecutar una serie de instrucciones o líneas de código de manera controlada dentro de nuestros programas, a las cuáles se les conoces como ciclos o bucles. Un ciclo o bucle permite ejecutar en repetidas ocasiones las instrucciones o líneas de código  indicadas por el programador, con lo cuál, no existe la necesidad de duplicar líneas de código para ejecutarlas en más de una ocasión. En python, contamos con el ciclo o bucle while, el cuál permite repetir la ejecución de un grupo de instrucciones, mientras se cumpla una condición, es decir, mientras la condición del ciclo o bucle se cumpla las instrucciones se seguirán ejecutando.
+
+SINTAXIS:
+
+while condición:
+	instrucción
+	instrucción
+	instrucción
+	...
+
+	 PRÁCTICO 5
+Sucesión Fibonacci, cada número es la suma de los dos anteriores
+
+SENTENCIAS BREAK Y CONTINUE
+En Python, los bucles o ciclos pueden ser interrumpidos, o simplemente dejar de ejecutrar el código dentro del bucle e iniciar una nueva iteración. Cabe destacar que en programación una iteración es la repetición de un segmento de código dentro de un programa. Para lograr la interrucpción de una iteración. contamos con las sentencias break y continue:
+	- SENTENCIA BREAK:
+		En Python, sentencia break se utiliza para detener la ejecución de una iteración  y salir de ella, con lo cual, el programa podrá continuar con la ejecución del código que se encuentre fuera de nuestro bucle. 
+	- SENTENCIA CONTINUE:
+		Por otro lado, en Python, también contamos con la sentencia continue, la cual permite detener la iteración actual y volver al principio del bucle, para realizar la nueva iteración, si es que la condición que rige a nuestro bucle se sigue cumpliendo. Recordemos que en programación una iteración es la repetición de un segmento de código dentro de un programa. 
+
+LA FUNCIÓN len()
+En Python, la función len() nos permite obtener la longitud de una cadena de caracteres, o bien, el número de elementos que componen un objeto. La SINTAXIS correcta para poder utilizar la función len() es la siguiente:
+	- len + () + ("La Geekipedia")
+	  len("La Geekipedia")
+
+
+CONCATENAR CON EL MÉTODO format()
+El mpétido format(), nos permite mostrar los valores contenidos en una variable y utilizarlos dentro de una cadena de caracteres, sustituyendo el nombre de la variable con un juego de {}m ubicandolas en la posición donde queremos que se muestren dichos valores. Algo importante de mencionar, es que cuando utilizamos el método format(), la concantenación se puede realizar, sin importar que las variables sean de tipo String o de tipo numérico. Las alternativas de SINTAXIS para utlizar el método format() son las sigueintes: 
+	- 1 "Hola Carlos tienes 22 años"
+            "Hola {} tienes {} años".format(nombre, edad)                        
+	   
+	- 2 "Hola {nombre} tienes {edad} años".format(nombre = "Carlos", edad = 22)
+
+	- 3 "Hola {0} tienes {1}".format(nombre, edad)
+	
+	Se imprime en pantalla: 
+	    Hola Carlos tienes 22 años
+
+
+CONCATENACIÓN CON f-strings
+Una alternativa de CONCATENACIÓN más eficiente a todas las que hemos visto hasta ahora, son las lietrals strings o también conocidas como F-STRINGS. Las f-strings, gueron introfucidas a partir de la versión 3.6 de Python. 
+Permiten agregar ecpresiones dentro de una constante tipo STRING, y al mismo tiempo, obtener una mayor LEGIBILIDAD en nuestro código.
+SINTAXIS:
+	nombre = Carlos"
+	edad = 22
+		
+		f"Hola {nombre} tienes {edad} años"
+
+Una gran ventaja de las f-strings es que son evaluadas al momento de su ejecución, con lo cual, es posible agregar CUALQUIER variedad  de expresiones que sean válidas.
+EJEMPLO:
+	f"{4 + 1}"
+	'5'
+
+LOS MÉTODOS strip(), rstrip() y lstrip()
+En Python, al trabajar con cadenas de caracteres, en ocaciones surge la necesidad de eliminar espacios en blanco o algún carácter en específico, ya sea al inicio, o bien, al final de la cadena. Para apotarnos ante esta situación, en Python contramos con tres métodos de gran utilidad:
+ 1- strip()
+ 2- lstrip()
+ 3- rstrip()
+
+	1- Se utiliza para eliminar caracteres especificados al inicio y al final de una cadena de caracteres, tomando en cuenta que si al el método strip() no se le especifica uno o más caracteres a eliminiar, solo eliminara espacios en blanco y saltos de línea. Este método solo puede eliminar los carácteres al inicio y al final de la cadena, y no los caracteres que se encuentren en la parte central. SINTAXIS:
+					cadena.strip()
+					" Hola Ernesto "
+
+
+	EL MÉTODO rstrip()
+	El método rstrip(), se uitiliza para eliminar únicamente caraceteres especificados al final de una cadena.
+Al igual que el método strip(), si no se especifica uno o más caracteres a eliminar, solo eliminara espacios en blanco y saltos de línea. SINTAXIS:
+		cadena.rstrip()
+		" Hola Ernesto "
+		" Hola Ernesto"
+
+		cadena.rstrip()
+		" Hola Ernesto "
+		" Hola Ernest"
+	
+	EL MÉTODO lstrip()
+	El método lstrip(), se utiliza para eliminar únicamente 	
+caracteres especificados al inicio de una cadena.
+Al igual que los dos métodos anteriores, si no se especifica uno o más caracteres a eliminar, solo eliminara espacios en blanco y saltos de línea. SINTAXIS
+			cadena.lstrip()
+			" Hola Ernesto "
+			"Hola Ernesto "
+
+			cadena.lstrip(" H")
+			" Hola Ernesto "
+			"ola Ernesto "
+
+MÉTODOS DE FORMATO
+
+En Python, es posible convertir la primera letra de cada palabra de un String en mayúsculas, y a su vez, convertir el resto de letras que componen cada palabra de un String en minúsculas.
+Para realizar esta acción, contamos con los métodos istitle() y title(), los cuales se utilizan para identificar si la primera letra de cada palabra comienza con mayúscula, y el resto de letras se encuentran en minúsculas, y de no ser así, realizar la respectiva conversión. SINTAXIS
+				nombre_variable.istitle()
+				nombre_variable.title()
+
+			EJEMPLO
+				nombre_completo = "carLOS galLaRDo"
+				nombre_completo.istitle() ---> (true - FALSE) 
+
+				nombre_completo.title() ---> "Carlos Gallardo"
+
+
+MÉTODOS DE FORMATO (2)
+
+En Python, contamos con métodos que nos permiten convertir todas las letras de una cadena de caracteres a mayúsculas, o bien, a minúsculas.
+
+Y a su vez, también contamos con métodos para identificar si una cadena de caracteres se encuentra completamente en mayúsculas o en minúsculas.
+
+MÉTODOS islower() y lower()
+		
+	Los métodos islower() y lower(), se utilizan para identificar si todas las letras de una cadena de caracteres se encuentran en minúsculas, y de no ser así, convertir todas las letras en minúsculas. SINTAXIS:
+				nombre_variable.islower()
+				nombre_variable.lower()
+
+				Ejemplo:
+					nombreVariable = "La Geekipedia"
+					nombreVariable.islower() ---> (true-FALSE)
+
+					nombreVariable.lower()
+					nombreVariable = "la geekipedia"
+
+MÉTODOS isupper() y upper()
+
+Los métodos isupper() y upper(), se utilizan para identificar si todas las letras de una cadena de caracteres se encuentra en mayúsculas, y de no ser así, convertirlas en mayúsculas. SINTAXIS:
+	nombre_variable.isupper()
+	nombre_variable.upper()
+
+	Ejemplo:
+		nombreVariable = "La Geekipedia"
+		nombreVariable.isupper() ---> (true-FALSE)
+
+		nombreVariable.upper()
+		nombreVariable = "LA GEEKIPEDIA"
+
+EL MÉTODO swapcase()
+En Python, contamos con el método swapcase(), que a diferencia de los métodos lower() y 
+upper(), nos permite w todas las letras de una cadena de caracteres, donde las mayúsculas se convierten en minúsculas y las minúsculas se convierten en mayúsculas. 
+SINTAXIS:
+	nombre_variable.swapcase()
+EJEMPLO:
+	nombre_variable = "La Geekipedia"
+	nombre_variable.swapcase()
+	      "lA gEEKIPEDIA"
+
+MÉTODO capitalize()
+En Python, el método capitalize() se utiliza para convertir el primer carácter de un String en una letra mayúscula, y a su vez, todas las letras restantes en minúsculas. 
+SINTAXIS:
+	nombre_variable.capitalize
+EJEMPLO:
+	string = "el VIAJE eS ls RecoMpensa"
+	string.capitalize()
+		El viaje es la recompensa
+
+MÉTODOS DE FORMATO (3)
+
+En Python, es posible alinear el texto que imprimimos en pantalla, de acuerdo a nuestras necesidades, es decir, podemos alinear una impresión en pantalla, a la izquierda, o a la derecha o al centro. Para poder realizar esta acción, contamos con tres métodos de gran utilidad, los cuales son:
+			center(), ljust() y rjust()
+
+MÉTODO center()
+El mpetodo center(), nos permite centrar un String, añadiendo espacios o caracteres según nosotros lo indiquemos, tanto al inicio y al final del String, para posteriormente mostrarnos el mismo String, pero con los cambios realizados. SINTAXIS:
+							nombre_variable.center(10, "=") max. 2
+								Colocar primero el int
+								Colocar despues las comillas que debe contener UN SOLO elemento
+								() = int
+								() = int > string.len()
+
+EJEMPLO center():
+string = "menú"    _   _   _   m   e   n   ú   _   _   _
+string.center(10)             
+
+string.center(10,"=")  =   =   =   m   e   n   ú   =   =   =
+
+nota: ARGUMENTO --> valor que le pasamos a un método para que pueda trabajar de manera correcta
+
+MÉTODO ljust()
+El método ljust(), nos permite alinear un String a la izquierda, añadiendo espacios o caracteres según nosotros lo indiquemos, únicamente al final de un String, para posteriormente mostrarnos el mismo String pero con los cambios realizados. SINTAXIS:
+								nombre_variable.ljust(10, "=")
+
+EJEMPLO ljust()
+string = "menú"
+string.ljust(10)        m   e   n   ú   _   _   _   _   _   _
+string.ljust(10, "=")   m   e   n   ú   =   =   =   =   =   =
+
+MÉTODO rjust()
+El método rjust(), nos permite alinear un String a la derecha, añadiendo espacios o caracteres según nosotros lo indiquemos, únicamente al inicio del String, para posteriormente mostrarnos el mismo String pero con los cambios realizados. SINTAXIS:
+							nombre_variable.rjust(10, "=")
+
+EJEMPLO	 rjust()
+string = "menú"
+string.rjust(10)        -   -   -   -   -   -  m   e   n   ú
+string.rjust(10, "=")   =   =   =   =   =   =  m   e   n   ú
+
+nota: los guiones bajos son espacios en blanco. Estos los pone el programa en función de la cantidad que indiquemos con el número entre paréntesis
+
+
+
+MÉTODO count()
+En Python, el método count(), es de gran utilidad cuando tenemos la necesidad de conocer la cantidad de veces que aparece una cadena o carácter en especifico dentro de un texto. De manera predeterminada, el método count(), se encargará de buscar una subcadena en particular, dentro de todo el contenido que compone a una cadena en específico. Además, el método count(), tiene la capacidad de buscar una subcadena en una parte en específico de la cadena principal. SINTAXIS:
+	nombre_variable.count() NO
+	nombre_variable.count("substring") SI
+	nombre_variable.count("substring", int) SI
+	nombre_variable.count("substring", int, int) SI
+	FUNDAMENTAL QUE SE SIGA CORRECTAMENTE EL ORDEN EN EL QUE SE MUESTRA
+
+EL MÉTODO count() COMIENZA A CONTAR LOS CARÁCTERES DESDE LA IZQUIERA DEL PRIMER CARÁCTER, ES DECIR, SI EL STRING CONTIENE "Hola Mundo", CONTARÁ 11 CARACTERES, YA QUE EMPIEZA A CONTAR DESDE EL LUGAR ANTERIOR A LA H	
+
+EL MÉTODO COUNT TAMBIÉN PUEDE ENCONTRAR POR EJEMPLO 2 CARACTERES JUNTOS DENTRO DE UN STRING, EJEMPLO:
+													string = "Hola Mundo"
+													print(string.count("Mu"))	
+													1
+CON EL NÚMERO ENTERO LE DECIMOS A LA FUNCIÓN count() DESDE DONDE EMPEZAR A CONTAR O BUSCAR UN CARÁCTER O SUBCADENA, EJEMPLO:
+																string = "Hola Mundo"
+													 			print(string.count("o",10))
+																1
+	
+SI QUEREMOS QUE EL MÉTODO count() COMIENCE A CONTAR DESDE EL FINAL, ES DECIR, DE ATRÁS PARA ADELANTE, TENEMOS QUE UTILIZAR NÚMEROS NEGATIVOS EN LUGAR DE POSITIVOS EN LA PARTE DONDE PONEMOS EL NÚMERO ENTERO	
+
+SI SE USAN 2 NÚMEROS ENTEROS, GENERAREMOS UNA ESPECIE DE "RANGO" EN EL CUAL QUEREMOS QUE NUESTRO MÉTODO BUSQUE LA CADENA O SUBCADENA QUE LE PEDIMOS, EJEMPLO:
+																				string = "Hola Mundo"
+																				 print(string.count("o",5,11))
+																				1
+																			ARRANCARÍA CONTANDO SOLO LA PALABRA 																			Mundo
+
+MÉTODO startswith()
+El método startswith(), se utiliza para comprobar si una cadena de caracteres comienza con una subcadena en particular. Además, es posible establecer un rango de búsqueda dentro de la cadena principal. SINTAXIS:
+			variable.startswith() NO
+			variable.startswith("substring") SI 
+			variable.startswith("substring",int) SI
+			variable.startswith("substring",int, int) SI
+
+nota: el método startswith retorna solamente True or False
+
+El máximo de posiciones que recorre el método startswith depende de la cantidad de caracteres que indiquemos como argumento en la función, es decir, si escribimos variable.startswith("D") recorrerá una sola posición.
+
+Si colocamos variable.startswith("se",6), empezará a contar desde la posición 6, y contará hasta la posición 8, ya que recorrerá solo dos carácteres por "se".
+
+Si colocamos variable.startswith("se",6,7) empieza contando desde la posición 6 y termina en la 7 pero sin contarla. La forma en la que funciona este método es muy similar al método count().
+
+MÉTODO endswith()
+El método endswith(), se utiliza para comprobar si una cadena de carácteres termina con una subcadena en particular. Además, es posible establecer un rango de búsqueda dentro de la cadena principal. SINTAXIS:
+			variable.endswith() NO
+			variable.endswith("substring") SI 
+			variable.endswith("substring",int) SI
+			variable.endswith("substring",int, int)SI
+
+SUBSTRINGS
+En Python, una cadena de carácteres, es una sucesión que puede contener carácteres especiales o alfanuméricos, es decir, letras, números, y/o símbolos. Una cadena: 
+	"Aprendiendo Python desde cero"
+Y en Python es posible acceder a partes específicas de una cadena de carácteres, también llamadas substrings o subcadenas. Un substring o subcadena es una sucesión de carácteres dentro de una cadena principal. EJEMPLO:
+			"Aprendiendo Python desde cero"
+			"Aprendiendo Python","desde cero","P"
+Para generar subcadenas a partir de una cadena principal, es necesario utilizar la siguiente SINTAXIS:
+	variable[inicioSubString : finSubString : saltos]
+
+nota: los saltos son el núm de saltos que realizará el índice para generar la subcadena. Són muy útiles para por ejemplo imprimir sólo números impares, EJEMPLO: 
+								variable = "012345"
+								print(variable[1:6:2])
+								1 3 5
+Los valores asignados al inicio, final y saltos deberán ser valores enteros, y a su vez, el valor que se le asigne a los índices pueden ser positivos o negativos. Teniendo en cuenta que los índices positivos se situaran desde el inicio de la cadena, haciendo su recorrido de izquierda a derecha. Mientras que los índices negativos, se situaran desde el final de la cadena, haciendo su recorrido de izquiera a derecha. 
+
+EJERCICIO PRÁCTICO 6
+Crear un programa que solicite una frase en pantalla, y posteriormente pedir al usuario que introduzca una palabra de esa frase que desee eliminar.
+
+CICLO O BUCLE FOR
+En Python, el ciclo o bucle for, es una estructura de control que nos permite repetir un bloque de instrucciones (sentencias), cierta cantidad de veces. SINTAXIS:
+		for + variable + in + objeto_iterable + :
+			instruccion
+			instruccion
+			instruccion
+			...
+
+¿QUÉ ES UN OBJETO ITERABLE?
+Un objeto iterable, es aquel que permite recorrer sus elementos uno a uno. Como por ejemplo, una cadena de caracteres.
+
+EJERCICIO PRÁCTICO 7
+Desarrollar un programa que invierta una cadena de caracteres, y a su vez, esta cadena de caracteres deberá ser ingresada por el usuario desde teclado.
+	- No se permite modificar la cadena de caracteres 	original
+	- Utilizar el ciclo o bucle for
+
+
+LA CLASE RANGE
+En Python, la clase range, genera secuencias de números inmutables, es decir, que no se pueden modificar, estas secuencias se generan a partir de un rango previamente establecido. Generalmente la clase range, se utiliza como objeto iterable dentro de una sintaxis del ciclo o bucle for, con el cual se logran realizar las respectivas iteraciones. La clase range nos permite trabajar con un mínimo de un argumento y un máximo de tres argumentos de manera simultánea. Así, podremos decidir el número con el que comenzará y terminará la secuencia de números, y a su vez, indicar el incremento o decremento entre un número y el siguiente. SINTAXIS:
+		range(start, stop, step)
+
+Stop: Es un valor entero, que indica el número hasta el cual se va a generar la secuencia de números, y este número JAMÁS formará parte de la secuencia.
+
+Start: Es un valor entero, que indica el número a partir del cual se comenzará a generar la secuencia de números, y este número SIEMPRE formará parte de la secuencia.
+
+Step: Es un valor entero, que indica el incremento o decremento de la suceción numérica entre un número y el siguiente.
+
+nota: para ir de atrás para adelante con el método range, deberíamos realizar algo como el sig. ejemplo:
+	range(10, 0, -1)
+En lugar de ir hacia delante, va a ir restando de a uno hasta llegar al 0.
+
+SINTAXIS BUCLE for CON range()
+
+for variable in range(start,stop,step):
+	instrucción...
+	instrucción...
+	instrucción...
+	...
+
+EJERCICIO PRÁCTICO 8
+Desarrollar un programa que muestre en pantalla, la tabla de multiplicar de un número cualquiera, este número deberá ser ingresado desde teclado por el usuario.
+	- Utilizar el ciclo o bucle for.
+	- La tabla debera contener las multiplicaciones que van desde el 0 hasta el 10.
+
+
+EJERCICIO PRÁCTICO 9
+Desarrollar un programa que solicite una frase desde teclado, así como un caracter en específico, ya sea una letra, un número o un caracter especial. Posteriormente, el programa deberá imprimir en pantalla la frase ingresada desde teclado, "sin vocales", y en caso de que el caracter en específico sea parte de la frase, el bucle deberá finalizar su ejecución.
+	- Utilizar un ciclo o bucle, ya sea while o for. 
+	- Considerar que el usuario puede ingresar vocales en mayúsculas y/o minúsculas.
+
+
+------------------ESTRUCTURA DE DATOS------------------
+
+En programación, las estructuras de datos son aquellas que nos permiten orrganizar la información de manera eficiente, y así, diseñar alternativas de solución para un determinado problema.
+
+En Python, una de las estructuras de datos más sencilla que existe son las listas.
+
+LISTAS
+Las listas, se utilizan para almacenar conjuntos de información, de esta manera, crear una colección de elementos ordenados, y a su vez, estos elementos pueden o no estar relacionados entre sí, es decir, una lista puede ser homogénea o heterogénea.
+
+	listas homogéneas: Nos referimos a que todos los elementos que conforman a la lista, 	son del mismo tipo de dato.
+	
+	listas heterogéneas: Nos referimos a que todos los elementos que conforman a la lista	son de diferentes tipos de dato.	
+
+Además, las listas tienen la característica de ser mutables, es decir, que su contenido se puede modificar después de haber sido creadas. SINTAXIS:
+								lista = []
+EJEMPLOS:
+	lista_homogénea = ["Javier", "Carlos", "María"]
+	lista_heterogénea = ["nombre", 2, 3.14, True]
+
+LISTAS 2
+En Python, cuando trabajamos con listas, surge la necesidad de acceder a los elementos contenidos dentro de la misma, ya que de esta manera podremos consultar e incluso modificar su contenido. Para acceder a los elementos de una lista, es necesario apoyarnos de los índices, los cuales, le indicaran a nuestro programa la posición exacta del elemento con el cual deseamos trabajar dentro de la lista. SINTAXIS:
+					marcas = ["Apple", "Samsung", "Xiaomi", "Huawei"]
+
+LISTAS 3
+En Python, una de las grandes ventajas al trabajar con listas, es que podemos modificar cada uno de sus elementos, de acuerdo a nuestras necesidades. Modificar los elementos de una lista, es muy sencillo, ya que la sintaxis que se utiliza, es similar, a la sintaxis que utilizamos para acceder a los elementos de una lista. SINTAXIS:
+								vocales = ["a", "e", "i", "o", "u"]
+								vocales[1] = "x"
+
+MÉTODO append()
+En Python, al trabajar con listas, se llega a la necesidad de agregar nuevos elementos a las mismas, para así, ampliar la cantidad de información con la que estamos trabajando. Para esta situación, contamos con el método append(), el cual nos permite agregar nuevos elementos al final de una lista. SINTAXIS:
+						nombre_lista.append(nuevo_elemento)
+
+MÉTODO instert()
+En Python, es posible insertar elementos dentro de una lista, en una posición determinada. Con locual, podremos establecer el orden y organización de todos los elementos que conformen a nuestras listas. Para esta situación, contamos con el método inster(), que a diferencia del método append(), nos permite indicar la posición exacta dentro de la lista, donde queremos agregar el nuevo elemento. SINTAXIS:
+						nombre_lista.insert(int posición, nuevo_elemento)
+
+MÉTODO pop()
+En Python, al trabajar con listas, adempas de agregar y acceder a elementos, es posible eliminar elementos de una lista, ya sea el último elemento, o bien, un elemento en específico. Para lograr eliminar elemntos de una lista contamos con el método pop(), el cual, nos permite acceder a la lista uy eliminar ya sea el último elemento, o bien, un elemento en específico, para lo cual, se debe especificar su posición exacta dentro de la lista. SINTAXIS:
+			nombre_lista.pop(posición)
+
+MÉTODO remove()
+En Python al trabajar con listas, es posible eliminar un elemento, especificando el elemento a eliminar, a diferencia del método pop(), donde tenemos que especificar la posición exacta dentro de la lista, para poder eliminar dicho elemento. Para esta situacióin, contamos con el método remove(), el cual, nos permite eliminar un elemento dentro de una lista, especificando a través de un argumento, el elemento que deseamos eliminar.
+SINTAXIS:
+	nombre_lista.remove(elemento_a_eliminar)
+
+INSTRUCCIÓN DEL
+En Python, al trabajar con listas, además de poder eliminar uno o varios elementos de una lsita, es posible eliminar toda una lista. Para lograrlo, conramos con la instrucción del, la cual nos permite eliminar toda una lista, y a su vez, nos permite eliminar un único elemento indicando la posición exacta del elemento. O bien, eliminar dos o más elementos de manera simultánea, indicando el rango de las posiciones que ocupan los elementos a eliminar. SINTAXIS:
+						del nombre_lista
+						del nombre_lista[posición]
+						del nombre_lista[inicio:fin]
+MÉTODO reverse() 
+En Python, al trabajar con listas, en ocaciones nos podemos encontrar con la necesidad de invertir los elementos de una lista. Invertir una lista, significa que, el primer elemento de una lista se convertirá en el úlimo elemento, el segundo elemento de la lista se convertirá en el penúltimo y así sucesivamente. En Python, existen diversas maneras de invertir una lista, y una de ellas, es utilizar el método reverse(), el cual, se encarga de invertir los elementos de una lista en su mismo lugar. Es decir, el método reverse() modifica las posiciones de la lista actual, en lugar de crear una nueva lista. SINTAXIS:
+			nombre_lista.reverse()
+
+MÉTODO sort()
+Al trabajar con listas, cuando se ingresan los elementos que forman parte de la misma, no siempre son ingresados de manera ordenada, con lo cual, nuestras listas pueden carecer de un orden en la información que contienen. Para esta situación contamos con el metodo sort(), el cual, nos permite ordenar una lista, tanto en orden ascendente o desdendente, dependiendo de nuestras necesidades. El método sort(), nos permite trabajar con un argumento para indicar que la lista será ordenada de manera descendente, es decir, de mayor a menor. O bien, es posible no establecer ningún argumento al método sort() con lo cual la lista será ordenada de manera ascendente, es decir, de menor a mayor. SINTAXIS:
+								nombre_lista.sort(reverse = True)
+
+MÉTODO index()
+En Python, al trabajar con los elementos que conforman a una lista, surge la necesidad de buscar un elemento en específico, ya sea para eliminarlo, o bien, para manipularlo de acuerdo a nuestras necesidades. Para dar solución a esta situación, en Python contamos con el método index(), el cual, nos permite localizar dentro de una lista, un elemento en específico. El método index(), devuelve un valor de tipo entero, el cual, representa el índice de la primera coincidencia del elemento especificado a encontrar. Este método, nos permite trabajar con mínimo un argumento y máximo tres argumentos de manera simultánea.
+SINTAXIS:
+	nombre_lista.index(elemento, inicio, fin)
+
+MÉTODO extend()
+Una de las tareas más habituales al trabajar con listas, es concatenarlas, es decir, unir dos o más listas para formar una única lista. En Python, existen múltiples alternativas para concatenar dos o más listas, entre las que destacan el método extend(). El método extend(), permite concatenar dos o más listas, y a su vez, nos permite agregar varios elementos a una lista, como elementos individuales a partir de una secuencia. SINTAXIS:
+								nombre_lista.extend(obj_iterable)
+nota: obj_iterable = lista, range(), ...
+
+MÉTODO sum()
+Al trabajar con listas que contienen únicamente valores numéricos, surge la necesidad de sumar todos los elementos contenidos en la lista. Para esta situación, contamos con el método sum(), el cual, nos regresa la suma de todos los elementos de una lista, compuesta únicamente por valores numéricos. SINTAXIS:
+						sum(obj_iterable, valor_inicial)
+
+EJERCICIO PRÁCTICO 10
+Desarrollar un programa en Python, que solicite desde teclado la longitud de una lista, que contendrá únicamente elementos de tipo entero. De acuerdo a la longitud indicada, solicitar nuevamente desde teclado, cada uno de los elementos que contendrá la lista e irlos introduciendo elemento a elemento dentro de la lista. Finalmente mostrar en pantalla, la lista con los elementos que se solicitaron desde teclado, y a su vez, la suma de todos los elementos que componen a la lista. 
+
+EJERCICIO PRÁCTICO 11
+desarrollar un programa en Python, que, dada la siguiente lista:
+					lista = ["A", "B", "b", "c", "E", "E", "f", ]	
+Le solicite al ususario introducir desde teclado el elemento que desea eliminar. De esta manera, el programa deberá eliminar dicho elemento, tomando en cuenta que el elemento puede estar contenido en la lista más de una vez. Además, el programa deberá eliminar el elemento, sin importar que el usuario introduzca su elección en mayúsculas o minúsculas.	
+
+EJERCICIO PRÁCTICO 12
+Desarrollar un programa en Python que, dada la siguiente  lista:
+							numeros = [1, 2, 3, 4, 5]
+Elimine el primer y último número de la lista, tomando en cuenta que desconocemos los elementos que componen a nuestra lista. Posteriormente, el programa deberá mostrar por pantalla dos listas, la primera lista, será la que contiene los elementos que no fueron eliminados, y la segunda lista, deberá contener los elementos que fueron eliminados.	
+
+CONSTRUCTOR list()
+En Python, podemos encontrarnos con la necesidad de tener un objeto iterable, el cual, queremos convertir en una lista, y así manipular cada uno de sus elementos. Una alternativa para convertir objetos iterables a listas, es utilizar un ciclo, el cual, se encargaría de recorrer cada uno de los elementos, y a su vez, irlos almacenando uno a uno dentro de una lista. No obsante, esta solución podría ser poco práctica al momento de querer simplificar nuesto código y recursos, ya que necesitaríamos utilizar varios métodos y líneas de código para lograrlo. Ante esta situación, contamos con el constructor list(), el cual, nos permite  convertir objetos iterables a listas, de una manera rápida, compacta y eficiente. SINTAXIS:
+										list(obj_iterable)
+
+LISTAS ANIDADAS
+Las listas anidadas, son listas dentro de otra lista, es decir:
+				lista = [ [1, 2, 3] ]
+
+MATRICES CON LISTAS ANIDADAS
+Las matrices, son una estructura de datos bidimensional, cuyos elementos son organizados en filas y columnas. Decimos que es bidimensional, porque una matriz esta estructurada en dos dimensione, es decir, un ancho que corresponda a sus filas y un largo que corresponde a sus columnas. En Python una manera común de crear matrices, es utilizando listas anidadas, con lo cual, podemos generar una colección ordenada de datos, en filas y columnas. Una matriz, puede contener n cantidad de filas y m cantidad de columnas, tienendo en cuenta que n y m pueden ser un número cualquiera, es decir, una matriz puede tener cualquier cantidad de filas y cualquier cantidad de columnas. REPRESENTACIÓN GRÁFICA:
+						PRIMERO LAS FILAS Y DESPUÉS LAS COLUMNAS: 
+								  COLUMNAS
+								F 1   2   3
+								I 4   5   6
+								L 7   8   9
+								A 10  11  12
+								S
+matrix = [[1, 2, 3],
+          [4, 5, 6],    ES IMPORTANTE ESCRIBIR EN EL CÓDIGO LAS MATRICES DE ESTA FORMA PARA                 
+          [7, 8, 9]]    QUE, CUALQUIERA QUE LEA EL CÓDIGO, ENTIENDA QUE SE TRATA DE UNA                
+                        MATRIZ
+
+MATRICES CON EL CICLO FOR
+Al trabajar con matrices, es necesario tener acceso a cada uno de sus elementos de manera automatizada, ya que de esta manera podemos manipular y trabajar con la información contenida dentro de las matrices. Para esta situación, podemos apoyarnos del ciclo for, el cual, nos permitirá automatizar el acceso a la información contenida dentro de cada fila y columna de una matriz.
+Se utilizan los ciclos anidados, es decir, un ciclo for, dentro de otro ciclo.
+
+EJERCICIO PRÁCTICO 13:
+Desarrollar un programa que genere una matriz con valores de tipo entero desde teclado de manera automatizada con las siguientes características: 
+	- El usuario tendrá que especificar, a través de teclado, la cantidad de filas y 	columnas que tendrá la matriz que desea generar.
+	- El programa deberá pedir al usuario todos los valores que contendrá la matriz, 	elemento a elemento.
+	- Cuando el programa termine su ejecución, se deberá mostrar en pantalla la matriz 	resultante en formato de matriz.
+
+SUMA DE MATRICES
+Cuando tenemos dos o más matrices, es posible realizar operaciones entre ellas, es decir, podemos sumarlas, restarlas, multiplicarlas e incluso dividirlas. Sin embargo, únicamente nos centraremos en la suma de matrices , ya que la finalidad, es aprender cómo implementar el lenguaje de programación Python al utilizar matrices. En matemáticas, la suma de matrices es una operación lineal que consiste en unificar los elementos de dos o más matrices que coincidan en posición dentro de sus respectivas matrices. A su vez, las matrices deberán tener la misma dimensión, es decir, deben tener la misma cantidad de filas y columnas, de lo contrario, la suma no podrá efectuarse. 
+
+EJERCICIO PRÁCTICO 14
+Desarrollar un programa que permita realizar la suma de matrices de manera automatizada, este programa deberá tener las siguientes características:
+	- El programa deberá solicitarle al usuario la cantidad de matrices que desea sumar, y a su vez, se deberá validar que el usuario este intentando sumar dos o más matrices.
+	- El programa deberá solicitar al usuario la cantidad de filas y columnas que tendrán las matrices que se van a sumar.
+	- El programa deberá solicitar al usuario los elementos que contendrá cada matriz generada, a través de un mensaje en pantalla indicando la matriz actual, así como la fila y columna donde se introducirá dicho elemento.
+	- El programa deberá realizar la suma de las matrices generadas por el usuario, y, a través de una impresión en pantalla, mostrar todas las matrices incluyendo la matriz resultante en formato de matriz, mostrando las matrices horizontalmente e incluyendo los signos de suma e igual.
+
+DICCIONARIOS
+En python, un diccionario es una estructura de datos, que se utiliza para almacenar un conjunto de elementos no ordenados, y al igual que las listas, un diccionario puede ser homogéneo o heterogéneo. Es decir, todos los elementos que conforman a un diccionario, pueden ser del mismo tipo de dato, o bien, de diferentes tipos de datos. Además, los diccionarios al igual que las listas, tienen la característica de ser mutables, esto quiere decir, que después de haber sido creados su contenido se puede modificar. SINTAXIS:
+							nombre_diccionario = {} SI
+							nombre_diccionario = {key: elemento} SI
+					nombre_diccionario = {key: elemento, key: elemento...} SI
+key: es la clave para hacer referencia a un elemento dentro del diccionario.
+
+NO SE RECOMIENDA usar la misma key en un mismo diccionario
+
+Para asignar nuevos valores a los diccionarios, deberemos especificar la key entre corchetes con su valor correspondiente. SINTAXIS:
+					diccionario[Key] = valorCorrespondiente
+MÉTODOS EN DICCIONARIOS
+- LEN(diccionario) --> Retornará la longitud del diccionario
+
+- 'Key' IN diccionario --> Retornará si la key que especificamos se encuentra o no en el diccionario
+
+- diccionario.GET('Key') --> Retornará el elemento que se encuentre almacenado dentro de la key que especificamos. En caso de que esta no se encuentre dentro del diccionario, retornará 'None'.
+NOTA: Podemos especificar un valor por defecto en caso dado de que la key que nosotros especificamos no se encuentre dentro del diccionario de la siguiente manera: diccionario.get('keyInexistente', 'valorPorDefecto'). Es decir, como la key no se encuentra dentro del diccionario, el programa nos retornará 'valorPorDefecto'.
+
+- diccionario.KEYS() --> Retornará todas las keys del diccionario
+
+- diccionario.VALUES() --> Retornará todos los valores almacenados dentro de las keys del diccionario
+
+- diccionario.ITEMS() --> Retornará todos los elementos en conjunto, tanto keys como valores, que serán mostrados en forma de tuplas. Estas no las vimos todavía, pero son el próximo tema, por lo que no es problema.
+
+- diccionario.POPITEM() --> Eliminará el último elemento en conjunto(key y valor) del diccionario y lo mostrará en pantalla
+
+- diccionario.POP(key) --> Eliminará el elemento en conjunto (key y valor) de la key especificada. A esta sintaxis podemos sumarle un valor que retornará en caso de que el programa no encuentre la key especificada dentro del diccionario: diccionario.pop(key, 'vlorAlternativo')
+
+- diccionario.UPDATE(diccionario2) --> Agregará los elementos de diccionario2 dentro de diccionario. Cabe recalcar que esto también puede hacerse con un diccionario y un objeto iterable compuesto por keys y valores. 
+NOTA: Sólo 'diccionario' se verá afectado por el método update, mientras que diccionario2 no modificará su composición. Además, si en diccionario se encuentra un elemento que se repita con otro de diccionario2, entonces el valor se modificará al nuevo de diccionario2, ejemplo: diccionario = {'calle1': 'Mendoza',
+		'calle2': 'San Juan'
+		}   
+diccionario = {'esquina': 'San Martín'
+		'calle1': 'Lavalle'}
+
+La key calle1 pasará de contener 'Mendoza' a 'Lavalle'
+
+RESTRICCIONES EN DICCIONARIOS
+- En los diccionarios, solo se pueden usar 'immutable types', que significa tipos de datos inmutables, tales como int, str, float, etc. EJEMPLO:
+							diccionario = {(1, 1): 'a',
+									(1, 2): 'b',
+									 (2, 1): 'c'}
+No se pueden utilizar listas por ejemplo como keys, ya que las listas como tales no son tipos de datos inmutables, es decir, que se pueden modificar. EJEMPLO:
+
+									diccionario = {[1, 1]: 'a'}									TypeError: unhashable type: 'list'
+
+Sin embargo, los valores de los diccionarios pueden ser de cualquier tipo de dato, ya sean mutables o inmutables, tanto como listas, tuplas, enteros, floats, etc. EJEMPLO:
+									diccionario = {1: [1, 2, 3],
+											 2: ['Hola']}
+
+A dictionary is the second type of collection, the first one are lists. What is a collection?:
+	- A collection is nice because we can put more than one value in it and carry them all aroung in one convenient package
+	- We have a bunch of values in a single variable
+	- We do this by having more than one place "in" the variable
+	- We have ways of finding the different places in the variable.
+
+What is NOT a 'Collection'?
+- Most of our variables have one value in them - when we put a new value in the variable - the old value is overwritten
+
+DICTIONARIES
+	- Dictionaries are Python's most powerful data collection
+	- Dictionaries allow us to do fast database-like operations in Python
+	- Dictionaries have different names in different languages:
+- Associative Arrays - Perl/PHP
+- Properties or Map or HashMap - Java
+- Property Bag - C#/.Net
+
+- Lists index their entries based on the position in the list
+- Dictionaries are like bags - no order
+- So we index the things we put in the dictionary with a "lookup tag"
+- El orden de los diccionarios no va a ser igual a como declaremos los valores que contenga, es decir, si declaramos primero key = 'money' y despues key2 = 'candy' puede que aparezca primero candy y despues money
+
+DICTIONARIES LITERALS (CONSTANTS)
+- Dictionary literals use curly braces and have a list of key:value pairs
+- You can make an empty dictionary using empty curly braces
+
+DICTIONARIES TRACEBACKS
+nota: Tracebacks are basically the messages that the python terminal shows when an error happened. i.e. Traceback (most recent call last): 
+	print(ccc['csev'])
+	KeyError: 'csev'
+
+- Dictionaries tracebacks: It is an error to reference a key which is not in the dictionary
+- We can use the in operator to see if a key is in the dictionary
+
+- Our common use of dictionaries is counting how often we "see" something
+
+nota: MUY IMPORTANTE tener en cuenta los operadores in y not in, que sirven para preguntar si algo se encuentra dentro de otro algo. Pueden resultar sumamente útiles en prácticamente todos los programas
+
+THE get() METHOD FOR DICTIONARIES
+- Ya vimos esto antes, pero sirve repasarlo...
+
+The pattern of checking to see if a key is already in a dictionary and assuming a default value if the key is not there is so common that there is a method called get() that does this for us
+
+MÉTODO split()
+Al trabajar con strings que contienen varios elementos dentro, podemos encontrarnos con la necesidad de separarlos en distintos espacios para poder así acceder a cada uno de ellos. Para ello, en Python, contamos con el método split(), el cual nos permitirá separar un string completo en distintos elementos, transformándolo en una lista, o de tipo list. SINTAXIS
+			variable_string.split()
+
+DEFINITE LOOPS AND DICTONARIES
+Even though dictionaries are not stored in order, we can write a for loop that goes through all the entries in a dictionary - actually it goes through all of the keys in the dictionary and looks up the values.
+
+nota: the lists have less information than dictionaries, and that´s why dictionaries are more usefull than lists, but of course it depends on the way we want to implement them.
+
+TWO ITERATION VARIABLES
+- We loop through the key-value pairs in a dictionary using 'two' iteration variables
+
+- Each iteration, the first variable is the key and the second variable is the corresponding value for the key. (Revise code in dictionariesPart3.py)
+
+nota: Python is the only language which allows us to write to indexes in for loops.
+
+OPENING A FILE
+- Before we can read the contents of the file, we must tell Python which file we are going to work with and what we will be doing with the file.
+- This is done with the open() function
+
+- open() returns a "file handle" - a variable used to perform operations on the file
+
+- Similar to "File -> Open" in a Word Processor
+
+USING open()
+- handle = open(filename, mode)
+- returns a handle use to manipulate the file
+- filename is a string
+- mode is optional and should be 'r' if we are planning to read the file and 'w' if we are going to write to the file.
+SINTAXIS EXAMPLE:
+fhand = open('mbox.txt', 'r')
+
+¿WHAT IS A HANDLE?
+fhand = open('mbox.txt')
+print(fhand)
+TextIOWrapper name='mbox.txt' mode='r' encoding='UTF-8'
+
+A handle is like an intermediator between our program and the computer's disk where the file is stored. Is like our connection, and we can open, read, write and close files with it
+
+WHEN FILES ARE MISSING
+>>>fhand = open('stuff.txt')
+
+Tracebak (most recent call last)...and all the rest of the traceback...
+
+THE NEWLINE CHARACTER
+- We use a special character called the "newline" to indicate when a line ends
+- We represent it as \n in strings
+-Newline is still one character - not two
+
+FILE PROCESSING
+A text file can be thought as a sequence of lines
+A text file has newlines characters at the end of each line
+
+FILE HANDLE AS A SEQUENCE
+- A file handle open for read can be trated as a sequence of strings where each line in the file is a string in the sequence
+- We can use the for statement to iterate through a sequence
+- Remember - a sequence is an ordered set
+SINTAXIS:
+	xfile = open('mbox.txt')
+	for cheese in xfile:
+		print(cheese)
+
+nota: IS VERY IMPORTANT to choose a .txt file that's inside the carpet we are executing our program.
+nota: in the for loop above we are using the handle with for cheese IN XFILE.
+
+COUNTING LINES IN A FILE
+- Open a file read-only
+- Use a for loop to read each line
+- Count the lines and print out the number of lines
+(The code is in FilesPart2.py)
+
+READING THE *WHOLE* FILE
+We can read the whole file (newlines and all) into a single string
+
+SEARCHING THROUGH A FILE
+We can put an if statement in our for loop to only print lines that meet some criteria
+
+nota: 
+- Each line from the file has a newline at the end
+- The print statement adds a newline to each line
+
+MIRAR VIDEO FILES PART2 A PARTIR DE 5:19
+
+SEARCHING THROUGH A FILE (FIXED)
+- We can strip the whitespace from the right-hand side of the string using rstrip() from the string library
+- The newline is considered "white space" and is stripped
+
+SKIPPING WITH CONTINUE
+We can conveniently skip a line by using the continue statement
+
+USING IN TO SELECT LINES
+We can look for a string anywhere in a line as our selection criteria
+
+THE READ() METHOD
+- Esto habría que haberlo escrito un poco antes
+
+- The read() method basically just reads how much letters the file has (of course it must be a .txt file)
+
+
+IMPORTANTE:
+cd Desktop\Manuel\Python\Coursera
+
+TUPLES:
+Tuples are like unmodificable lists
+
+Tuples are another kind of sequence that functions much like a list - they have elements which are indexed starting at 0
+
+Unlike a list, once you create a tuple, you cannot alter its contents - similar to a string
+
+THINGS NOT TO DO WITH TUPLES
+- Use the sort() method
+- Use the append() method
+- Use the reverse() method
+
+Tuples Are more Efficient
+- Since Python does not have to build tuple structures to be modifiable, they are simpler and more efficient in terms of memory use and performance than lists
+
+- So in our program when we are making "temporary variables" we prefer typles over lists
+
+Tuples and Assignment
+- We can also put a tuple on the left-hand side of an assignment statement
+- We can even omit the parenthesis
+
+TUPLES AND DICTIONARIES
+The items() method in dictionaries return a key-value pair (in tuple format)
+
+TUPLES ARE COMPARABLE
+The comparision operator work with tuples and other sequences. If the first item is equal, Python goes on to the next element, and so on, until it finds elements that differ.
+
+SORTING LISTS OF TUPLES
+- We can take advantage of the ability to sort a list of tuples to get a sorted version of a dictionary
+- First we sort the dictionary by the key using the items() method and sorted() function
+
+USING sorted()
+We can do this even more directly using the built-in function sorted that takes a sequence as a parameter and returns a sorted sequence
+
+SORT BY VALUE INSTEAD OF KEY
+-If we could constuct a ist of tuples of the form (value, key) we could sort by value
+
+-We do this with a for loop that creates a list of tuples
+
+EVEN SHORTER VERSION
+List comprehension creates a dynamic list. In this case, we make a list of reversed tuples and then sort it.
+
+LIST COMPREHENSION is an interesting thing to learn about for writing more simple lines of code
+
+QUIZ CHAPTER 10
+9/10
+
+FUNCTIONS
+Are used to store and reuse
+
+We use def for defining a function
+
+A function is some stored code that we use. A function takes some input and produces an output.
+
+TYPE CONVERSIONS:
+When you put an integer and floating point in an expression, the integer is simplicity converted to a float
+
+You can control this with the built-in functions int() and float()
+
+STRING CONVERSIONS
+You can also use int() and float() to convert between strings and integers
+
+Tou will get an error if the string does not contain numeric characters
+
+BUILDING OUR OWN FUNCTIONS
+We create a new function using the def keyword followed by optional parameters in parentheses
+
+We indent the body of the function
+
+This defines the function but does not execute the body of the function
+
+EXERCISE 4.6
+nota: NO SIRVE multiplicar 10,50 x 45 horas, hay que buscar otra manera para obtener como resultado final 498,75
+

@@ -1,0 +1,162 @@
+- Cascading Style Sheets
+- Describes the presentation of a doc
+HTML V CSS
+- HTML is the fundation and structure
+- CSS is the painting of a house, the style or esthethic.
+
+We can aply CSS i 3 different ways:
+- External Stylesheet
+using a style.css file and linking it to the index.html
+- Internal Stylesheet
+typing what we'd do in the style.css but in the index.html
+- Aply CSS inline
+typing css code inside an html block
+note: avoid using inline css
+
+- if I want to change the colour of a paragraph, I type:
+p (of paragraph in HTML) { color}
+- to change font size of paragraph, type font-size (number of pixels) inside the curly braces where we typed color
+- You can write css inside a .html file by using the <style> symbol
+- The program will take the last css taken. For example, if the link to the style.css file is in line 10 and the <style> symbol is on line 11, the program will show you off what you've done in line 11, in the <style>.
+
+- the structure of css code is called ruleset, wich contains a selector (wich will be outside the curly braces, like p of paragraph), and a declaration, that contains a property and a property value. A property could be color and a prop. value red.
+
+- it's color not colour. American, not British.
+
+SELECTORS
+- element selector: select all the elements of an specific type, and changes it all. Body element, p element (paragraph).
+- class selector: you can connect specific elements of html with a class name, with css classes. 
+For example: In HTML I've got this code:  <p id="second" class="gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptate veniam adipisci eaque quo a exercitationem, ipsa error et! Esse repudiandae vero vel? Sed accusamus deserunt doloremque eius quisquam optio!</p>
+
+Notice that, at the very start when I declarate the <p> tag, I've typed the id="second" (This has already been tought), and class="gray". So that's the class, and via that you connect that specific tag with css code. Of course, in css you have to declarate that class saying .gray{ color= gray}. The dot before gray in the declaration is fundamental for it to now that's a class. 
+(.)gray{color=gray}
+
+- id selector: remember that we used to type (#id) for calling a specific section of our page in html? Well, here in CSS is the same, you type #theSpecificID {code}
+- IDs should be unique, only one per page.
+- classes are the most common
+- span element: is only used to mark part of a text, but doesn't do anything itself
+- It's better to use a class element instead of a span.
+- There's an element that's literally *, wich is the universal element (changes everything)
+- CSS works from the top to the bottom, like a cascade, so it'll take the last rule in front of the one behind. BUT, if it's more specific, it's gonna be taken as more important. E.g: if I type p{color=red}, all paragraphs will turn into red, but if I also type before it .gray{color=gray}, that one's talking about a class, so it's more specific, and the one that'll be taken
+- If you want to enfasize an specific element, so that the code takes that element as the most important, type !important next to it, but don't use it, you have to learn how to organize your code.
+- If you want to see why an element works and the other doesn't, why one overrules the other, check it here specificity.keegan.st
+- If i'm on the body for example, in css, only with typing color, I can change the font color. 
+- rgb: red, green, blue. SINTAXIS: rgb(0,255,0) it's an example, but as you change the numbers, the color will. The first number is for red, the second for green and the third for blue.
+- rgba: red, green, blue, alpha. Think of the alpha value as an opacity percentage.
+- If you keep the mouse on the color square on the css code, vs will show you a color pallette to change all this values with it.
+- hsl: another type like rgb. hue, saturation and lightness. It can also be added the alpha channel as the rgba.
+- 50% on the lightnes value (hs(l)) means that there it's 50% to be quitted or added. 0% is black and 100% is white.
+- it's not that important to know everything about color things, because includes stuff from graphic design and things like that.
+- https://coolors.co color pallette picking tool. Also helps you with the contrastes between the font color and the background. Legibility and accesibility picking colours for your web page.
+
+CSS UNITS
+
+- Units determine the size of everything in your page. We'll cover the most common.
+ 
+note: haven't created a lesson 3 folder because it wasn't really necesary for colors.
+note: the github page https://github.com/gitdagray/css_course of the course is full of usefull elements like MDN resources.
+
+- normally 16px is the common font size on every page. We don't want to use an absolute font size, such as pixel settings in chrome.
+- border: gives a border to the element with the specified caracteristics. border: 2px dashed red;
+- talking about percentages, in width particullary, if we type 100% width for any element, it'll take the half of the page for it. Then, if I've zgot an h1 inside of a header element, if I type header{width: 50%}, then the h1 will have the half of the 100 of the page for its width.
+- the height element will grow as the content grows
+- we want to let the browser to handle the font size
+- 1rem is similar to 16px
+WARNING: be carefull using rem that you don't type em, because it'll be the double of it.
+- padding: is like an inside space, if we have got a border on the element (h1 for example). An extra padding. It's like a margin.
+- ch: character. Helps us determine the character width by its measure.
+- the user agent stylesheet are the settings of the browser that are aplied by default.
+- vw: viewport's width
+- vh: viewport's height
+- The viewport is the area of a web page that's visible to the user.
+- the body element is not the full height of the page, only according to the elements that are inside of it. If we want to change this, and making the body element to be the full height of the web page, we can do that with the viewport element height unit.
+
+BOX MODEL
+- includes the content, the calculation, the padding and the border
+- we can see a box model in our page with the dev tools (inspeccionar page) in opera
+- box-sizing: border-box centers correctly the text inside a box in h1. Helps us calculate the size that we are asigning.
+- remember using classes to change multiple parts of html code at the same time with css.
+- 1em = 1rem
+- margin separates every box/es in the web page.
+- margin-top: only gives a margin for the top of every box. You can also use margin-right, margin-bottom... margin alone aplies to all, top, bottom, etc.
+- shift + alt + A comment selected text.
+- margin: 1.5em 2em 2em; 2em on right and left and 2em on bottom. 1.5em on top. You can do the same either with margin or padding.
+- the border element is to add the lines or dots or whatever that rounds the box or the text.
+- border-top-width
+- border-top-style
+- border-top-color
+- https://developer.mozilla.org/en-US/docs/Web/CSS/border-style ALL ABOUT BORDERS IN CSS
+
+TIPOGRAPHY
+- is the way that text is arranged and presented.
+- padding sets space to top, bottom, right and left.
+- if you were coding css in a body element for example, and there are some other elements or tags that were not affected (for example, I write font-size: 30px in a body element and submit button is not affected), you can type some code for that tag. Following the example, you should create a button{} element, and inside it type font-size: inherit; That'll make the button element to inherit the font size from his "bigger brother" wich is body.
+
+TEXT SETTINGS
+- text-decoration. It's obvious what it does. It has lots of things to do.
+- text-transform: transforms our text in the specified way
+- text-align. Depends of the type of text we're writing. News, Blog, Chat, etc.
+- text-indent(extent)
+- https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals all of this in MDN
+
+- line-height: space between lines of text. Easier readable.
+- letter-spacing: space of letters in words
+- word-spacing
+
+FONT PROPERTIES
+- font-weight
+- font-style
+- font-family: times new roman, serif, sans-serif, monospace, cursive, etc. When there are three together, means that depending on what your computer has, it'll use one or other font-family.
+- https://fonts.google.com GOOGLE FONTS
+
+STYLING LINKS
+- defaul styles:
+    web links: blue
+    hypertext links: purple. visisted links
+    underlined
+    when changes our cursor to a ponter with a finger
+    when holding the click down on the link, it turns into orange.
+- text-decoration: none = quits the underline of links
+- cursor: changes the cursor.
+- color
+
+PSEUDO-CLASS
+- represent the current state of the element, because it can change.
+- doesn't matter if they're above or not from the main element in css. Because of the cascade. However, the cascade works between the pseudo-classes. It matters wich of those is above, and will alter the web page.
+
+- a:active represents the active state of the anchor tag. If it's clicked, its active state will change
+- a:focus works when the tab key is pressed.
+
+note: a good idea is to use the color pallette selector for the a:hover, so that we can get a similar color, but not the same, to the default one. Also using the opacity, or alpha.
+
+LIST STYLES
+for ordered list
+- list-style-type: a, b, c...
+- georgian
+- decimal leading zero
+- disc: makes an ordered list look like an unordered list.
+- upper-roman --> <ol start="3"> (HTML) starts in number 3 (III); <ol start="3" reversed>, goes from 3 to 1
+for unordered list
+- list-style-type
+- text-align
+- list-style-position --> alines the points or bullets with the text.
+- color
+- line-height
+- list-style-image: url() --> changes the bullets for images (like checkmarks)
+
+- we can overwrite what we typed in ul or ol by typing inside an li element.
+- ul li:nth-child(2). It's a pseudo-class that affects only to the second list item.
+- content: "Only $5>> changes the bullets or squares of and ul to the text, in this case "only $5>>"
+
+IMPORTANT
+pseudo-elements: ::marker
+- A CSS pseudo-element is used to style specified parts of an element.
+
+- <li value="26">. It's only to tell css where it should start counting if there is a list-style-type element.
+
+- The border-radius CSS property rounds the corners of an element's outer border edge.
+
+- with the display: block; element we can make, in the chapter 9 mini project, that all the <li> element is coloured when the mouse hovers it.
+
+- ul li:nth-child(5) a. This code allows me to change an specific <li> element inside the <ul>. NOTE: never forget to type the <a> tag after the other code, because if not it isn't going to work.
+
